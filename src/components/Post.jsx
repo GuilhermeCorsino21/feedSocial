@@ -18,11 +18,22 @@ export function Post() {
             <div className={styles.content}>
                 
                     <p>Fala galeraa 👋</p>
-                    <p>O mz tem 1,80 de altura e 55 kgs🚀</p>
-                    <p>👉{' '} <a href=''> @TaMagro</a></p>
-                    <p> <a href=''>#novoProjeto #HoraDeFibrar #Creuu</a></p>
+                    <p>Estou fazendo mais um projeto para meu portfólio utilizando o REACT.js</p>
+                    <p>👉{' '} <a href=''> Meu gitHub | @GuilhermeCorsino21</a></p>
+                    <p> <a href=''>#React #FrontEnd #Developer #BentoDinossauro</a></p>
                 
             </div>
+
+            <form className={styles.commentForms}>
+                <strong>Deixe seu Feedback</strong>
+
+                <textarea 
+                    placeholder='Deixe um comentário'
+                />
+                <footer>
+                     <button type="submit"> Comentar </button>
+                </footer>
+            </form>
         </article>
     )
 }

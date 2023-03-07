@@ -119,3 +119,7 @@
 .commentForms button[type=submit]:hover {
     background: darkseagreen;
 }
+
+.commentList {
+    margin-top: 2rem;
+}

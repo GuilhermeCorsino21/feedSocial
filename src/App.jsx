@@ -32,9 +32,9 @@ const posts = [
       role: "CTO @Efi",
     },
     content: [
-      { type: 'paragraph' , content: 'Fala galeraa 👋'},
-      { type: 'paragraph' , content: 'Estou fazendo mais um projeto para meu portfólio utilizando o REACT.js'},
-      {type: 'link', content: '@GuilhermeCorsino21'}
+      { type: 'paragraph' , content: 'Sou o Diego'},
+      { type: 'paragraph' , content: 'Estou aqui de exemplo'},
+      {type: 'link', content: '@DmAlberto'}
     ],
     publishedAt: new Date('2023-03-27 11:00:00'),
   }
@@ -54,8 +54,8 @@ export function App() {
 
         {posts.map( post => {
           return (
-          <
-            Post 
+          <Post 
+              key={post.id}
               author={post.author}
               content={post.content}
               publishedAt={post.publishedAt}

@@ -28,13 +28,20 @@ export function Post({author, publishedAt, content}) {
         event.preventDefault()        
 
         setComments([...comments , newCommentText]);
-        setNewCommentText('');
-          
+        setNewCommentText('');         
           
     };    
 
     function handleNewCommentChange() {
         setNewCommentText(event.target.value);
+    }
+
+    function deleteComment(commentToDelete){
+        const commentsWithoutDeleteds = comments.filter(comment => {
+            return comment !== commentToDelete;
+        })
+
+        setComments(commentsWithoutDeleteds);
     }
 
     
@@ -75,6 +82,7 @@ export function Post({author, publishedAt, content}) {
                     placeholder='Deixe um comentário'
                     value={newCommentText}
                     onChange={handleNewCommentChange}
+                    required
                 />
                 <footer>
                      <button type="submit"> Comentar </button>
@@ -82,7 +90,11 @@ export function Post({author, publishedAt, content}) {
             </form>
             <div className={styles.commentList}>
                 {comments.map(comment => {
-                    return <Comment key={comment} content={comment}/>
+                    return <Comment 
+                    key={comment} 
+                    content={comment} 
+                    onDeleteComment={deleteComment}
+                    />
                 })}                
             </div>
         </article>
